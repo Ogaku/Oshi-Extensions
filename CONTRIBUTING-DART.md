@@ -96,12 +96,12 @@ MyRegisterExtension main(OSource source) {
 ## Available Host Bridge APIs (`package:oshi/bridge_lib.dart`)
 
 - **`OSource`**: Metadata passed to `main(OSource source)` (`id`, `name`, `description`, `version`, `lang`, `baseUrl`, `iconUrl`, `bannerUrl`, `loginType`).
-- **`OHttpClient`**: Cookie-aware HTTP client (`get`, `post`, `put`, `delete`, `setHeader`, `clearCookies`) returning `OHttpResponse` (`statusCode`, `body`, `json`, `headers`).
-- **`OProtocolDriver`**: High-speed native protocol accelerator (`OProtocolDriver('librus')`, `OProtocolDriver('vulcan')`, `OProtocolDriver('sample')`).
+- **`OHttpClient`**: Cookie-aware HTTP client (`get`, `post`, `put`, `delete`, `setHeader`, `clearCookies`, `getCookies`, `setCookie`) returning `OHttpResponse` (`statusCode`, `body`, `json`, `headers`, `url`, `location`).
+- **`OProtocolDriver`**: Sample/demo protocol driver (`OProtocolDriver('sample')`) for testing and mock data.
 - **Top-level helpers**:
   - `reportProgress(double? progress, String? message)`
   - `setRegisterDataJson(Map<String, dynamic> providerDataJson)`
   - `localized(String key)`
-  - `generateHebeKeyPair()` & `getHebeSignatureHeaders(...)`
-  - `uuidV4()`, `sha256Hex(String input)`, `md5Hex(String input)`
+  - `generateRsaKeyPair()` & `getRsaSignatureHeaders(...)`
+  - `uuidV4()`, `sha256Hex(String input)`, `sha256Bytes(String input)`, `md5Hex(String input)`
 
